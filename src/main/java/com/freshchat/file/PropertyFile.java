@@ -10,7 +10,7 @@ public class PropertyFile {
         Properties prop = new Properties();
         try{
             //prop.load(getClass().getClassLoader().getResourceAsStream("NewrelicProperties.properties"));
-            prop.load(new FileInputStream("./NewrelicProperties.properties"));
+            prop.load(new FileInputStream("../NewrelicProperties.properties"));
         }
         catch (Exception e)
         {
