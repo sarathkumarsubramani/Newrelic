@@ -75,18 +75,19 @@ public class NewrelicMain {
     {
         List<NewrelicReport> reports = new ArrayList<NewrelicReport>();
         int queryStringSize = queryStringList.size();
-        int count =  queryStringSize !=0 ? (queryStringSize/100 +1) :0;
+        int limit = 25;
+        int count =  queryStringSize !=0 ? (queryStringSize/limit +1) :0;
         int first=0;
         int last =0;
         for(int i =1 ;i<=count ;i++) {
 
             if(i!=count)
             {
-                last = 100 * i;
+                last = limit * i;
             }
             else
             {
-                last = last + queryStringSize %100;
+                last = last + queryStringSize %limit;
             }
 
             List<String> metricsSubList = queryStringList.subList(first,last);
