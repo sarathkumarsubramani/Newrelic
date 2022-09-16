@@ -6,6 +6,7 @@ public class ApiRequest {
     private String endpoint;
     private Map<String, Object> queryParams = new HashMap();
     private List<String> queryStringSet= new ArrayList<String>();
+    private String test;
 
 
     private ApiRequest(ApiRequest.Builder builder) {
